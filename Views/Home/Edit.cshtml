@@ -1,0 +1,46 @@
+﻿@model BranchManagementApp.Models.Branch
+
+<h2>Edit Branch</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.BranchName)
+        @Html.TextBoxFor(m => m.BranchName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.BranchName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PersonName)
+        @Html.TextBoxFor(m => m.PersonName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.PersonName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.MobileNumber)
+        @Html.TextBoxFor(m => m.MobileNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MobileNumber, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.CompleteAddress)
+        @Html.TextBoxFor(m => m.CompleteAddress, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CompleteAddress, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Profession)
+        @Html.TextBoxFor(m => m.Profession, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Profession, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
